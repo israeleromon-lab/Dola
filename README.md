@@ -1,31 +1,7 @@
-# Dola, wrapped.
+# Vercel deployment
 
-A story-style birthday web app built with Next.js, Tailwind, Framer Motion, and canvas-confetti.
+The canonical application entry points are `app/page.tsx` and `app/layout.tsx`. Import the repository with **Root Directory** set to `.` and use the Next.js preset. Vercel should use `npm install` and `npm run build`; no environment variables are required.
 
-## Run locally
+The source compatibility modules under `components/`, `data/`, and `hooks/` preserve the existing `@/...` imports while the project is consolidated.
 
-```bash
-npm install
-npm run dev
-```
-
-Open http://localhost:3000. The production build is:
-
-```bash
-npm run build
-npm run start
-```
-
-## Deploy to Vercel
-
-Import `israeleromon-lab/Dola` into Vercel with these settings:
-
-- **Root Directory:** `.`
-- **Framework Preset:** Next.js
-- **Build Command:** `npm run build`
-- **Install Command:** `npm install`
-- **Output Directory:** leave blank; Vercel detects Next.js automatically
-
-No environment variables are required.
-
-The canonical Next.js entry points are `app/page.tsx` and `app/layout.tsx`. The older root-level files and `friendship-wrapped/` directory are retained as source/archive references and should not be selected as Vercel's root directory.
+Before production deployment, verify that the binary media files are available under `public/assets/` (including `track.m4a`, `track.mp3`, photos, clips, and posters). The current repository also retains the original root media files and the ZIP archive for reference.

@@ -1,0 +1,1 @@
+export { CoverSlide } from '../CoverSlide';

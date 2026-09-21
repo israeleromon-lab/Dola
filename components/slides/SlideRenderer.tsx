@@ -1,0 +1,1 @@
+export { SlideRenderer } from '../SlideRenderer';

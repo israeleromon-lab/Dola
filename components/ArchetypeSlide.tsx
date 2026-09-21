@@ -1,0 +1,1 @@
+export { ArchetypeSlide } from '../ArchetypeSlide';
